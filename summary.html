@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ملخص الطلب</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#FDFBF7] font-[Tajawal]">
+
+<div class="max-w-xl mx-auto p-6 space-y-6">
+  <h1 class="text-3xl font-bold text-center text-[#800020]">ملخص الطلب</h1>
+
+  <div id="summary" class="bg-white p-6 rounded-xl shadow space-y-2 text-lg"></div>
+
+  <a id="whatsappBtn" target="_blank"
+     class="block text-center bg-green-600 text-white p-3 rounded-xl text-lg hover:scale-105 transition">
+     إرسال عبر واتساب
+  </a>
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("orderData"));
+
+const summaryDiv = document.getElementById("summary");
+summaryDiv.innerHTML = `
+<p><strong>الاسم:</strong> ${data.name}</p>
+<p><strong>الجوال:</strong> ${data.phone}</p>
+<p><strong>الرقبة:</strong> ${data.neck} سم</p>
+<p><strong>الكتف:</strong> ${data.shoulder} سم</p>
+<p><strong>الصدر:</strong> ${data.chest} سم</p>
+<p><strong>الكم:</strong> ${data.sleeve} سم</p>
+<p><strong>الطول:</strong> ${data.length} سم</p>
+`;
+
+const message = encodeURIComponent(
+`طلب تفصيل ثوب جديد:
+الاسم: ${data.name}
+الجوال: ${data.phone}
+الرقبة: ${data.neck}
+الكتف: ${data.shoulder}
+الصدر: ${data.chest}
+الكم: ${data.sleeve}
+الطول: ${data.length}`
+);
+
+document.getElementById("whatsappBtn").href = `https://wa.me/967771671722?text=${message}`;
+</script>
+
+</body>
+</html>
