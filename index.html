@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kibar Al Shakhsiyat</title>
+<title>كبار الشخصيات للخياطة الراقية</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
@@ -11,56 +11,92 @@
 
 <style>
   html { scroll-behavior: smooth; }
+  .fade-in { animation: fadeIn 1.2s ease forwards; opacity:0 }
+  @keyframes fadeIn { to { opacity:1; transform: translateY(0);} from {opacity:0; transform:translateY(20px);} }
 </style>
 </head>
 
-<body class="bg-[#FDFBF7] font-[Tajawal] text-[#3E2723]">
+<body class="bg-[#FDFBF7] font-[Tajawal] text-[#3E2723] overflow-x-hidden">
 
 <header class="sticky top-0 bg-white/80 backdrop-blur border-b z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="font-[Amiri] text-2xl text-[#800020] font-bold">Kibar Al Shakhsiyat</h1>
-    <a href="measurements.html" class="bg-[#800020] text-white px-4 py-2 rounded-lg hover:scale-105 transition">Start Order</a>
+    <h1 class="font-[Amiri] text-2xl text-[#800020] font-bold">كبار الشخصيات</h1>
+    <a href="measurements.html" class="bg-[#800020] text-white px-5 py-2 rounded-lg hover:scale-105 transition shadow">
+      ابدأ الطلب
+    </a>
   </div>
 </header>
 
 <section class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center p-6 md:p-16">
-  <div class="space-y-6 animate-fadeIn">
+
+  <div class="space-y-6 fade-in">
     <h2 class="text-4xl md:text-6xl font-[Amiri] text-[#4a0012] leading-tight">
-      Elegance Defined,<br>Tailored For You
+      الأناقة تُفصّل<br> خصيصًا لك
     </h2>
-    <p class="text-lg text-gray-600">Custom VIP tailoring delivered to your doorstep.</p>
-    <div class="flex gap-4">
-      <a href="measurements.html" class="bg-[#800020] text-white px-6 py-3 rounded-xl hover:-translate-y-1 hover:shadow-lg transition">Start New Order</a>
-      <a href="#how" class="border border-[#800020] text-[#800020] px-6 py-3 rounded-xl hover:bg-[#800020] hover:text-white transition">How It Works</a>
+
+    <p class="text-lg text-gray-600 leading-relaxed">
+      خياطة خليجية فاخرة تصل إلى باب منزلك. أدخل قياساتك ودع خبراء الخياطة يصنعون ثوبك المثالي.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="measurements.html"
+         class="bg-[#800020] text-white px-6 py-3 rounded-xl hover:-translate-y-1 hover:shadow-lg transition text-center">
+         ابدأ طلب جديد
+      </a>
+
+      <a href="#how"
+         class="border border-[#800020] text-[#800020] px-6 py-3 rounded-xl hover:bg-[#800020] hover:text-white transition text-center">
+         كيف يعمل الموقع
+      </a>
+    </div>
+
+    <div class="flex gap-8 pt-6 border-t">
+      <div>
+        <p class="text-2xl font-bold text-[#800020]">100%</p>
+        <p class="text-sm text-gray-500">ضمان المقاس</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold text-[#800020]">VIP</p>
+        <p class="text-sm text-gray-500">خدمة فاخرة</p>
+      </div>
     </div>
   </div>
 
-  <div class="flex justify-center">
-    <span class="material-symbols-outlined text-[180px] text-[#800020] animate-pulse">checkroom</span>
+  <div class="flex justify-center fade-in">
+    <span class="material-symbols-outlined text-[170px] text-[#800020] animate-pulse">checkroom</span>
   </div>
+
 </section>
 
 <section id="how" class="bg-[#F2EBE0] py-16">
   <div class="max-w-6xl mx-auto text-center space-y-10 px-6">
-    <h3 class="text-3xl font-bold text-[#800020] font-[Amiri]">How It Works</h3>
+    <h3 class="text-3xl font-bold text-[#800020] font-[Amiri]">كيف تتم العملية</h3>
+
     <div class="grid md:grid-cols-3 gap-8">
       <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-2 transition">
         <span class="material-symbols-outlined text-4xl text-[#800020] mb-3">straighten</span>
-        <h4 class="font-bold mb-2">Enter Measurements</h4>
+        <h4 class="font-bold mb-2">أدخل القياسات</h4>
+        <p class="text-gray-500 text-sm">قم بإدخال مقاساتك بدقة عبر النموذج المبسط.</p>
       </div>
+
       <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-2 transition">
-        <span class="material-symbols-outlined text-4xl text-[#800020] mb-3">tune</span>
-        <h4 class="font-bold mb-2">Customize Details</h4>
+        <span class="material-symbols-outlined text-4xl text-[#800020] mb-3">design_services</span>
+        <h4 class="font-bold mb-2">اختر التفاصيل</h4>
+        <p class="text-gray-500 text-sm">حدد نوع القماش والتفاصيل التي تناسب ذوقك.</p>
       </div>
+
       <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-2 transition">
         <span class="material-symbols-outlined text-4xl text-[#800020] mb-3">send</span>
-        <h4 class="font-bold mb-2">Send via WhatsApp</h4>
+        <h4 class="font-bold mb-2">إرسال عبر واتساب</h4>
+        <p class="text-gray-500 text-sm">يتم إرسال الطلب مباشرة ليبدأ تنفيذ ثوبك.</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="text-center py-6 text-sm text-gray-500">© 2026 Kibar Al Shakhsiyat</footer>
+<footer class="text-center py-6 text-sm text-gray-500">
+  © 2026 كبار الشخصيات للخياطة الراقية
+</footer>
 
 </body>
 </html>
